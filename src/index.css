@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide scrollbars while keeping the scroll functionality */
+
 .hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none; 
 }
