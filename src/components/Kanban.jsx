@@ -5,7 +5,7 @@ import { FaFire } from 'react-icons/fa'
 
 export const CustomKanban = () => {
   return (
-    <div className='h-screen w-full bg-neutral-900 text-neutral-50'>
+    <div className='h-screen w-full bg-neutral-900 text-neutral-50 overflow-scroll hide-scrollbar'>
       <Board />
     </div>
   )
@@ -118,7 +118,7 @@ const Board = () => {
           </select>
         </div>
       </div>
-      <div className='flex h-full w-full gap-3 overflow-scroll p-4'>
+      <div className='flex h-full w-full gap-3 overflow-scroll p-4 hide-scrollbar'>
         {columns.map(columnValue => (
           <Column
             key={columnValue}
