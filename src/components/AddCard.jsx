@@ -1,4 +1,3 @@
-// AddCard.jsx
 import React, { useState } from 'react'
 import { FiPlus } from 'react-icons/fi'
 import { motion } from 'framer-motion'

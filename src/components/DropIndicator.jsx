@@ -1,4 +1,3 @@
-// DropIndicator.jsx
 import React from 'react'
 
 const DropIndicator = ({ beforeId, groupValue }) => {

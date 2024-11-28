@@ -1,4 +1,3 @@
-// Column.jsx
 import React, { useState } from 'react'
 import Card from './Card'
 import AddCard from './AddCard'
@@ -15,7 +14,6 @@ const Column = ({
 }) => {
   const [active, setActive] = useState(false)
 
-  // Filter cards based on grouping
   const filteredCards = cards.filter(card => {
     if (groupBy === 'status') {
       return card.status === groupValue
@@ -27,7 +25,6 @@ const Column = ({
     return false
   })
 
-  // Sort cards based on sorting preference
   const sortedCards = [...filteredCards]
   if (sortBy === 'priority') {
     sortedCards.sort((a, b) => b.priority - a.priority)
@@ -35,7 +32,6 @@ const Column = ({
     sortedCards.sort((a, b) => a.title.localeCompare(b.title))
   }
 
-  // Drag and drop handlers
   const handleDragStart = (e, card) => {
     e.dataTransfer.setData('cardId', card.id)
   }
@@ -56,7 +52,6 @@ const Column = ({
       let cardToTransfer = copy.find(c => c.id === cardId)
       if (!cardToTransfer) return
 
-      // Update the card's groupBy field to groupValue
       const updatedCard = { ...cardToTransfer }
       if (groupBy === 'status') {
         updatedCard.status = groupValue

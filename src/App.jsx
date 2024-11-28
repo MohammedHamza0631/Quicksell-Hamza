@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { CustomKanban } from './components/Kanban'
 function App () {
   return (

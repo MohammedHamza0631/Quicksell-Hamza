@@ -1,4 +1,3 @@
-// Board.jsx
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import Column from './Column'
@@ -15,7 +14,6 @@ const Board = () => {
   )
   const [loading, setLoading] = useState(true)
 
-  // Fetch data from the API
   useEffect(() => {
     fetch('https://api.quicksell.co/v1/internal/frontend-assignment')
       .then(response => response.json())
@@ -30,7 +28,6 @@ const Board = () => {
       })
   }, [])
 
-  // Persist user preferences
   useEffect(() => {
     localStorage.setItem('groupBy', groupBy)
   }, [groupBy])
@@ -43,10 +40,8 @@ const Board = () => {
     return <div>Loading...</div>
   }
 
-  // Generate columns based on grouping
   let columns = []
   if (groupBy === 'status') {
-    // Always include all statuses
     columns = ['Backlog', 'Todo', 'In progress', 'Done', 'Cancelled']
   } else if (groupBy === 'priority') {
     const priorityOrder = [4, 3, 2, 1, 0]
@@ -83,7 +78,6 @@ const Board = () => {
 
   return (
     <div>
-      {/* Header Component */}
       <Header
         groupBy={groupBy}
         setGroupBy={setGroupBy}

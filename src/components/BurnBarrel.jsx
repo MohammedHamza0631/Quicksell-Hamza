@@ -1,4 +1,3 @@
-// BurnBarrel.jsx
 import React, { useState } from 'react'
 import { FiTrash } from 'react-icons/fi'
 import { FaFire } from 'react-icons/fa'
